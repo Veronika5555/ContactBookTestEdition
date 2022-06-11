@@ -20,15 +20,29 @@ namespace ContactBookTestEdition.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            var people = _repo.GetAllPeople();
-            return View(people);
+            try
+            {
+                var people = _repo.GetAllPeople();
+                return View(people);
+            }
+            catch (Exception)
+            {
+                return View("Error");
+            }
         }
 
         [HttpGet("display")]
-        public IActionResult Display(int id)
+        public IActionResult Display(Person per)
         {
-            var person = _repo.GetPerson(id);
-            return View(person);
+            try
+            {
+                var person = _repo.GetPerson(per.Id);
+                return View(person);
+            }
+            catch (Exception)
+            {
+                return View("Error");
+            }
         }
 
         [HttpGet("edit")]

@@ -4,7 +4,8 @@
 }
 
 <div>
-
+    <a asp-controller="Home" asp-action="Index">Home</a>
+    <a asp-controller="Home" asp-action="Edit">Create a new contact</a>
     <h1 class="display-4">My Contact Book</h1>
     <table>
         @foreach (var person in Model)
