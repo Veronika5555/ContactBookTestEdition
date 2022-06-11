@@ -15,7 +15,6 @@ namespace ContactBookTestEdition.Data.Repository
             _ctx = ctx;
         }
 
-
         public void AddPerson(Person person)
         {
             _ctx.Contacts.Add(person);

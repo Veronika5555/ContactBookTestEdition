@@ -1,0 +1,29 @@
+﻿@model Person
+@{
+}
+
+<form asp-controller="Home" asp-action="Edit" method="post">
+    <input asp-for="Id" hidden />
+
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" type="text" required />
+    </div>
+
+    <div>
+        <label>Surame</label>
+        <input asp-for="SurName" type="text" required />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" type="text" required />
+    </div>
+
+    <div>
+        <label>Phone Number</label>
+        <input asp-for="PhoneNumber" type="text" required />
+    </div>
+
+    <input type="submit" value="Submit" />
+</form>
